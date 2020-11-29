@@ -1,2 +1,1 @@
-web:gunicorn dashboard.wsgi
-encoding = UTF-8
+web: gunicorn dashboard.wsgi
