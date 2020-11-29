@@ -1,0 +1,25 @@
+{% extends "forget.html" %}
+
+{% load static %}
+
+{% block contenido %}
+                <div class="login-form">
+                        <div class="register-link m-t-15 text-center">
+                            <form method="POST">
+                                {% csrf_token %}
+        
+                                {{formulario_registro.as_p}}
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox"> Agree the terms and policy
+                                    </label>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-flat m-b-30 m-t-30">Register</button>
+        
+                                <div class="register-link m-t-15 text-center">
+                                    <p>Ya tienes una cuenta? <a href="{% url 'dashboardg:login'%}"> Inicio </a></p>
+                                </div>
+                            </form>
+                        </div>
+                </div>
+{% endblock contenido %}

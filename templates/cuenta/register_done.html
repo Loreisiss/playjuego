@@ -1,0 +1,18 @@
+{% extends "forget.html" %}
+
+{% load static %}
+
+{% block contenido %}
+                <div class="login-form">
+                        <div class="register-link m-t-15 text-center">
+                            <form>
+                                <h1>Bienvenido {{nuevo_usuario.first_name}}!</h1>
+                                <p>Tu cuenta ha sido exitosamente creada. Ahora puedes 
+                                <a href="{% url 'dashboardg:login' %}">Ingresar</a>
+                                </p>
+        
+                            </form>
+                        </div>
+                </div>
+{% endblock contenido %}
+ 

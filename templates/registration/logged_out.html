@@ -1,0 +1,18 @@
+{% extends "forget.html" %}
+
+{% load static %}
+
+{% block contenido %}
+                <div class="login-form">
+                        <div class="register-link m-t-15 text-center">
+                            <div>
+                              
+                                <p>Se ha cerrado su sesión exitosamente.
+                                    Usted puede Ingresar otra vez <a href="{% url 'dashboardg:login' %}"> Ingrese aqui</a>
+                                </p>
+                                
+                            </div>
+                        </div>
+                </div>
+{% endblock contenido %}
+ 

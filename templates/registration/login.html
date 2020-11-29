@@ -1,0 +1,40 @@
+{% extends "forget.html" %}
+{% load static %}
+
+{% block contenido %}
+                <div class="login-form">
+                    <form action="{% url 'dashboardg:login' %}" method="POST">
+                    {% csrf_token %}
+                        <div class="form-group"> 
+                            {{form.as_p}}
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox"> Remember Me
+                                </label>
+                                <label class="pull-right">
+                                    <a href="#">Forgotten Password?</a>
+                                </label>
+    
+                            </div>
+                            <input type="hidden" name="next" value="{{next}}"/>
+                            <button type="submit" class="btn btn-success btn-flat m-b-30 m-t-30">Ingresar</button>
+                    </form>
+
+
+                        <div class="register-link m-t-15 text-center">
+                            <div>
+                                {% if form.errors %}
+                                <p>
+                                    Tu usuario y contrasena no son correctos por favor intente de nuevo
+                                </p>
+                                {% else %}
+                                <p>si usted no tiene una cuenta <a href="{% url 'dashboardg:register' %}"> Ingrese aqui</a></p>
+                                {% endif %}
+                            </div>
+                        </div>
+                        
+                    
+                    </div>
+                </div>
+{% endblock contenido %}
+ 
